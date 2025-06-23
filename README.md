@@ -37,9 +37,6 @@ ShoppingListAPI/
 ├── Program.cs           # נקודת כניסה ראשית
 └── Dockerfile          # הגדרות Docker
 
-Copy
-
-Apply
 
 API Endpoints
 📂 קטגוריות
@@ -49,7 +46,7 @@ POST   /api/categories           # יצירת קטגוריה חדשה
 PUT    /api/categories/{id}      # עדכון קטגוריה
 DELETE /api/categories/{id}      # מחיקת קטגוריה
 
-Copy
+
 
 Apply
 
@@ -60,7 +57,7 @@ POST   /api/shoppinglists        # יצירת רשימה חדשה
 PUT    /api/shoppinglists/{id}   # עדכון רשימה
 DELETE /api/shoppinglists/{id}   # מחיקת רשימה
 
-Copy
+
 
 Apply
 
@@ -70,7 +67,7 @@ POST   /api/shoppinglists/{id}/items     # הוספת פריט לרשימה
 PUT    /api/shoppinglists/{listId}/items/{itemId}    # עדכון פריט
 DELETE /api/shoppinglists/{listId}/items/{itemId}    # מחיקת פריט
 
-Copy
+
 
 Apply
 
@@ -95,9 +92,9 @@ dotnet ef database update
 # הפעלת השרת
 dotnet run
 
-Copy
 
-Execute
+
+
 
 🐳 הפעלה עם Docker
 # בניית תמונת Docker
@@ -106,9 +103,6 @@ docker build -t shopping-list-api .
 # הפעלת קונטיינר
 docker run -p 5000:80 shopping-list-api
 
-Copy
-
-Execute
 
 📊 מודל נתונים
 Categories - קטגוריות פריטים
