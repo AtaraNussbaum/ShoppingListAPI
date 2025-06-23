@@ -1,10 +1,5 @@
 ﻿{
-  "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "builder": "NIXPACKS"
-  },
-  "deploy": {
-    "startCommand": "dotnet YourProjectName.dll",
-    "healthcheckPath": "/health"
+    "builder": "DOCKERFILE"
   }
 }
