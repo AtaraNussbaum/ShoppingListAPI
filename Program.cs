@@ -115,15 +115,26 @@ using (var scope = app.Services.CreateScope())
     context.Database.EnsureCreated();
 
     // הוספת נתונים ראשוניים אם המסד ריק
-    if (!context.Categories.Any())
+    try
     {
-        context.Categories.AddRange(
-            new Category { Name = "מוצרי חלב", CreatedAt = DateTime.Now },
-            new Category { Name = "פירות וירקות", CreatedAt = DateTime.Now },
-            new Category { Name = "בשר ודגים", CreatedAt = DateTime.Now },
-            new Category { Name = "מוצרי ניקיון", CreatedAt = DateTime.Now }
-        );
-        context.SaveChanges();
+        if (!context.Categories.Any())
+        {
+            context.Categories.AddRange(new[]
+            {
+            new Category { Name = "Vegetables" },
+            new Category { Name = "Dairy Products" },
+            new Category { Name = "Beverages" },
+            new Category { Name = "Meat & Fish" },
+            new Category { Name = "Snacks" }
+        });
+
+            context.SaveChanges();
+        }
+    }
+    catch (DbUpdateException ex) when (ex.InnerException?.Message.Contains("UNIQUE constraint") == true)
+    {
+        // אם הקטגוריות כבר קיימות - פשוט תמשיכי
+        Console.WriteLine("Categories already exist, skipping seed data...");
     }
 }
 
