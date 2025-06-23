@@ -40,7 +40,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.npm
+*.npm
 .yarn-integrity
 
 # Environment variables
@@ -64,12 +64,12 @@ yarn-error.log*
 ehthumbs.db
 Thumbs.db
 
-# SQLite database files (אבל נרצה לכלול את shopping.db)
-# *.db
-# *.sqlite
-# *.sqlite3
+# SQLite database files - אבל נכלול את shopping.db
+*.db
+*.sqlite
+*.sqlite3
 
-# אבל נשמור על קובץ הדאטאבייס הראשי
+# אבל נכלול את קובץ הדאטאבייס הראשי
 !shopping.db
 
 # Logs
