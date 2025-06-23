@@ -118,10 +118,10 @@ using (var scope = app.Services.CreateScope())
     if (!context.Categories.Any())
     {
         context.Categories.AddRange(
-            new Category { Name = "מוצרי חלב", Description = "חלב, גבינות, יוגורט" },
-            new Category { Name = "פירות וירקות", Description = "פירות וירקות טריים" },
-            new Category { Name = "בשר ודגים", Description = "בשר, עוף ודגים" },
-            new Category { Name = "מוצרי ניקיון", Description = "חומרי ניקיון לבית" }
+            new Category { Name = "מוצרי חלב", CreatedAt = DateTime.Now },
+            new Category { Name = "פירות וירקות", CreatedAt = DateTime.Now },
+            new Category { Name = "בשר ודגים", CreatedAt = DateTime.Now },
+            new Category { Name = "מוצרי ניקיון", CreatedAt = DateTime.Now }
         );
         context.SaveChanges();
     }
