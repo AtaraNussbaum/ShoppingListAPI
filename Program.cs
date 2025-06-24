@@ -121,11 +121,11 @@ using (var scope = app.Services.CreateScope())
         {
             context.Categories.AddRange(new[]
             {
-            new Category { Name = "Vegetables" },
-            new Category { Name = "Dairy Products" },
-            new Category { Name = "Beverages" },
-            new Category { Name = "Meat & Fish" },
-            new Category { Name = "Snacks" }
+            new Category { Name = "פירות וירקות" },
+            new Category { Name = "מוצרי חלב" },
+            new Category { Name = "מאפים" },
+            new Category { Name = "דגים ובשר" },
+            new Category { Name = "חטיפים" }
         });
 
             context.SaveChanges();
